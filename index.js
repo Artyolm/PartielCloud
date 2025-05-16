@@ -10,10 +10,11 @@ app.use(express.static('public'));
 
 // MySQL configuration
 const dbConfig = {
-    host: 'your_host', // Replace with your MySQL host
-    user: 'your_user', // Replace with your MySQL user
-    password: 'your_password', // Replace with your MySQL password
-    database: 'your_database' // Replace with your MySQL database name
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    ssl: { rejectUnauthorized: false }
 };
 
 app.get('/', (req, res) => {
@@ -23,7 +24,6 @@ app.get('/', (req, res) => {
 app.get('/users', async (req, res) => {
     let connection;
     try {
-         res.send('<h1>Hello, this is a test!</h1><p>Your server is working.</p>');
         // Create a connection to the database
         connection = await mysql.createConnection(dbConfig);
         
