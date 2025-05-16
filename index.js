@@ -8,6 +8,10 @@ app.use(express.static('public'));
 
 
 app.get('/test', (req, res) => {
+  res.status(200).json({ message: "working" });
+});
+
+app.get('/test2', (req, res) => {
   res.status(200).json({ message: "Hello from Azure!" });
 });
 
