@@ -16,9 +16,10 @@ const dbConfig = {
     database: 'your_database' // Replace with your MySQL database name
 };
 
-app.get('/users', async (req, res) => {
+app.get('/', async (req, res) => {
     let connection;
     try {
+         res.send('<h1>Hello, this is a test!</h1><p>Your server is working.</p>');
         // Create a connection to the database
         connection = await mysql.createConnection(dbConfig);
         
