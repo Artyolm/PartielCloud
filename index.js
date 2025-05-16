@@ -16,6 +16,10 @@ const dbConfig = {
     database: 'your_database' // Replace with your MySQL database name
 };
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 app.get('/users', async (req, res) => {
     let connection;
     try {
