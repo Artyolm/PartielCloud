@@ -10,7 +10,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "npm install && npm run build --if-present"
   },
   "keywords": [],
   "author": "",
