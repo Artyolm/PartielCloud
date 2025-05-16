@@ -1,5 +1,5 @@
 const express = require("express");
-const dotenv = require("dotenv");
+//const dotenv = require("dotenv");
 const app = express();
 const PORT = process.env.PORT || 8080;
 const cors = require("cors");
@@ -8,7 +8,7 @@ const mysql = require("mysql2/promise"); // Utilisation de la version promise
 // Middleware
 app.use(cors());
 app.use(express.json());
-dotenv.config();
+//dotenv.config();
 
 // Configuration de la base de données
 /*const dbConfig = {
