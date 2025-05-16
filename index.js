@@ -10,14 +10,10 @@ app.use(express.json());
 
 // Configuration de la base de données
 const dbConfig = {
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_USER,
-  database: process.env.DB_NAME,
-  port: 3306, // Port par défaut MySQL
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
+  host: process.env["DB_HOST"],
+  user: process.env["DB_USER"],
+  password: process.env["DB_PASSWORD"],
+  database: process.env["DB_NAME"],
   ssl: { rejectUnauthorized: false } // Nécessaire pour Azure
 };
 
