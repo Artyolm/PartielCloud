@@ -16,7 +16,7 @@
                 const userList = document.getElementById('userList');
                 data.forEach(user => {
                     const li = document.createElement('li');
-                    li.textContent = `${user.name}, Age: ${user.age}`;
+                    li.textContent = `${user.name}`;
                     userList.appendChild(li);
                 });
             });

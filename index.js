@@ -1,7 +1,7 @@
-import express from 'express';
+const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8080;
-import cors from 'cors';
+const cors = require('cors');
 
 // Serve static files (if needed)
 app.use(express.static('public'));
