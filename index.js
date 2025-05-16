@@ -9,17 +9,17 @@ const PORT = 3000;
 app.use(express.static('public'));
 
 // MySQL configuration
-const dbConfig = {
+/*const dbConfig = {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 };
-
+*/
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.send('t\'s working');
 });
-
+/*
 app.get('/users', async (req, res) => {
     let connection;
     try {
@@ -41,7 +41,7 @@ app.get('/users', async (req, res) => {
         }
     }
 });
-
+*/
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
